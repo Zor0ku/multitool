@@ -13,8 +13,8 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
 var myObj = JSON.parse(this.responseText);
-document.write("<html><title></title><style>@import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli); margin: 0; padding: 0; font-family: Fauna One; } div {margin: 1em auto; padding: 50px; background-color: #fff; border-radius: 1em;} a:link, a:visited {color: #38488f; text-decoration: none; font-family: Fauna One;} a:hover {text-decoration: underline;} @media (max-width: 100px) {body {background-color: #fff;} div {width: auto; margin: 0 auto; border-radius: 0; padding: 1em; } }</style><body><center><table height='100%' width='50%'><tr><td><div><center><h1><p style='font-family: Fauna One'>Multi API Dox V3</h1>");
-document.write('<br><center><table><tr><td><textarea rows=15 cols=70 style="resize: none;">');
+document.write("<html><title></title><style>@import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli); margin: 0; padding: 0; font-family: Fauna One; } div {margin: 1em auto; padding: 50px; background-color: #fff; border-radius: 1em;} a:link, a:visited {color: #38488f; text-decoration: none; font-family: Fauna One;} a:hover {text-decoration: underline;} @media (max-width: 100px) {body {background-color: #fff;} div {width: auto; margin: 0 auto; border-radius: 0; padding: 1em; } }</style><body><center><table height='100%' width='50%'><tr><td><div><center><h1><p style='font-family: Fauna One'></h1>");
+document.write('<br><center><table><tr><td><textarea id="output" rows=15 cols=70 style="resize: none;">');
 for (x in myObj.items) {
 document.write(''+ myObj.items[x].link +'\n');
 }

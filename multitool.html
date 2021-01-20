@@ -1,0 +1,29 @@
+<html><head><script language="Javascript" src="myscr456905.js"></script><script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script>
+<title>Multi API Dox V3</title>
+<style>@import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli);  margin: 0; padding: 0; font-family: Fauna One; } div {margin: 1em auto; padding: 50px; </style>
+</head><body><center><table height="100%" width="50%"><tbody><tr><td><div><center>
+<h1><p style="font-family: Fauna One">Multi API Dox V3</p></h1>
+<p style="font-family: Fauna One">Enter Username or Real Name: <input type="text" id="username"> <input type="submit" name="submit" value="Search" onclick="start()"><br><br><font size="-2">Multi API Dox V3 Made by xbdm - Follow Telegram - https://t.me/joinchat/ROYBSO_tkN8OFPlO</font></p>
+</center></div></td></tr></tbody></table></center><br>
+<script>
+function start(){
+var username = escape(document.getElementById('username').value);
+if (username == "") {alert('You need to enter something for it to work.'); return false;}
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+var myObj = JSON.parse(this.responseText);
+document.write("<html><title>Multi API Dox V3</title><style>@import url(http://fonts.googleapis.com/css?family=Fauna+One|Muli); margin: 0; padding: 0; font-family: Fauna One; } div {margin: 1em auto; padding: 50px; background-color: #fff; border-radius: 1em;} a:link, a:visited {color: #38488f; text-decoration: none; font-family: Fauna One;} a:hover {text-decoration: underline;} @media (max-width: 100px) {body {background-color: #fff;} div {width: auto; margin: 0 auto; border-radius: 0; padding: 1em; } }</style><body><center><table height='100%' width='50%'><tr><td><div><center><h1><p style='font-family: Fauna One'>Multi API Dox V3</h1>");
+document.write('<br><center><table><tr><td><textarea rows=15 cols=70 style="resize: none;">');
+for (x in myObj.items) {
+document.write(''+ myObj.items[x].link +'\n');
+}
+document.write('</textarea></td></tr></table></center></div></body></html>');
+}
+};
+xmlhttp.open("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyBeQ3HIebcEnEzfdMEGzNWEsAytHTKAioo&cx=002586025106775550060:ecd7_kng0zk&q='"+username+"'&alt=json", true);
+xmlhttp.send();
+}
+</script>
+
+</body></html>
